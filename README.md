@@ -1,5 +1,14 @@
 # tracklists
  :arrow_forward: Little CLI program that makes skippable YouTube tracklists out of duration-based ones
+ 
+    1 Black Cow 5:07                       1 Black Cow 0:00
+    2 Aja 7:56                             2 Aja 5:07
+    3 Deacon Blues 7:26                    3 Deacon Blues 13:03
+    4 Peg 3:58                   ->        4 Peg 20:29
+    5 Home At Last 5:31                    5 Home At Last 24:27
+    6 I Got The News 5:03                  6 I Got The News 29:58
+    7 Josie 4:30                           7 Josie 35:01
+
 
 You've probably stumbled onto your share of YouTube albums that either didn't have a skippable tracklist, or worse yet, one that is based on track duration rather than total running time. This little CLI tool aims to remedy that problem by reading in what's in your clipboard -- regardless of platform! -- and spitting out a proper tracklist.
 
