@@ -4,14 +4,14 @@ import os
 def tracklist(data):
     """Given a list of tracks with their duration,
     returns the same list, but with cumulative times
-    so that they be skipped to in YouTube. The last
+    so that they be skipped-to in YouTube. The last
     item of each line must represent the duration.
     Ex:
     1 Black Cow 5:07         1 Black Cow 0:00
     2 Aja 7:56           ->  2 Aja 5:07
     3 Deacon Blues 7:26      3 Deacon Blues 13:03
     str -> str."""
-    # TODO: Need to make sure here the input makes sense
+    # TODO: Better string 'sanitizing'.
     data = data.strip()
     timer = 0
     tracklist = []
@@ -31,11 +31,12 @@ def tracklist(data):
     return '\n'.join(tracklist)
 
 def main():
+    # TODO: add CLI argument handling for files.
     try:
         data = pyperclip.paste()
         return tracklist(data)
     except:
-        exit('Clipboard input unparseable')
+        exit('Clipboard input unparseable.')
 
 if __name__ == '__main__':
     main()
