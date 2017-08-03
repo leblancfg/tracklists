@@ -17,6 +17,7 @@ def tracklist(data):
     tracklist = []
     tracks = [t for t in data.split('\n')]
     for track in tracks:
+        track = track.strip()
         # Change the last word to the current duration
         mins, secs = divmod(timer, 60)
         words = track.split()
@@ -39,4 +40,5 @@ def main():
         exit('Clipboard input unparseable.')
 
 if __name__ == '__main__':
+    # TODO: assure pyperclip works on cygwin
     main()

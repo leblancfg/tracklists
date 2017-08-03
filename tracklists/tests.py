@@ -1,5 +1,5 @@
-from tracklists import tracklist, main
 import pyperclip
+from tracklists import tracklist, main
 
 aja = """1 Black Cow 5:07
     2 Aja 7:56
@@ -47,3 +47,5 @@ def test_clipboard():
    pyperclip.copy(aja)
    assert main() == aja_fix
 
+def test_pypy():
+    pass
